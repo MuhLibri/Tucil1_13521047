@@ -1,5 +1,5 @@
 # Tugas Kecil 1 IF2211 - Strategi Algoritma 
-Dalam rangka menyelesaikan menyelesaikan persoalan permainan kartu 24, dibuatlah program ini untuk menemukan semua solusi yang mungkin. Program ini menggunakan algoritma brute force yang merupakan algoritma straightforward dalam menyelesaikan permasalahan.
+Dalam rangka menyelesaikan persoalan permainan kartu 24, dibuatlah program ini untuk menemukan semua solusi yang mungkin. Program ini menggunakan algoritma brute force yang merupakan algoritma straightforward dalam menyelesaikan permasalahan.
 
 # Requirement Program
 Untuk menjalankan program ini, cukup menyediakan environment yang biasa digunakan untuk menjalankan program java pada umumnya. Pengguna hanya perlu menyiapkan Java Development Kit (JDK) pada perangkat yang digunakan.
