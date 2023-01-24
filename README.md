@@ -5,7 +5,7 @@ Dalam rangka menyelesaikan menyelesaikan persoalan permainan kartu 24, dibuatlah
 Untuk menjalankan program ini, cukup menyediakan environment yang biasa digunakan untuk menjalankan program java pada umumnya. Pengguna hanya perlu menyiapkan Java Development Kit (JDK) pada perangkat yang digunakan.
 
 # Cara Menggunakan
-  Pengguna dapat mengubah file Main.java pada folder ==src== menjadi Main.class atau langsung menjalankan Main.class pada folder ==bin==. Jika pengguna ingin mengubah file Main.java menjadi Main.class terlebih dahulu, maka dapat dilakukan dengan
+  Pengguna dapat mengubah file Main.java pada folder ``src`` menjadi Main.class atau langsung menjalankan Main.class pada folder ==bin==. Jika pengguna ingin mengubah file Main.java menjadi Main.class terlebih dahulu, maka dapat dilakukan dengan
 1. Membuka terminal pada folder dimana Main.java berada. 
 2. ketik ==javac Main.java== pada terminal.
 
