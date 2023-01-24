@@ -1,9 +1,6 @@
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -55,8 +52,9 @@ public class Main {
         double var3 = strToDouble(c);
         double var4 = strToDouble(d);
 
+        // Mencari solusi
         long start = System.nanoTime();
-        ArrayList<String> solution = searchSolution(var1, var2, var3, var4);
+        Set<String> solution = new HashSet<>(searchSolution(var1, var2, var3, var4));
         long end = System.nanoTime();
         long executionTime = end - start;
         int nSolution = solution.size();
@@ -70,7 +68,7 @@ public class Main {
                 System.out.println(s);
             }
         }
-        System.out.printf("Waktu eksekusi: %d nanoseconds%n%n", executionTime);
+        System.out.printf("Waktu eksekusi: %f miliseconds%n%n", executionTime/1000000.0);
         System.out.println("Apakah ingin menyimpan solusi?");
         System.out.println("1. Ya");
         System.out.println("2. Tidak");
@@ -84,6 +82,7 @@ public class Main {
             save = input.next();
         }
 
+        // Menyimpan solusi
         if (save.equals("1")) {
             System.out.println("Ketik nama file untuk menyimpan solusi: ");
             String fileName = input.next();
@@ -124,8 +123,8 @@ public class Main {
         };
     }
 
-    public static ArrayList<String> searchSolution (double var1, double var2, double var3, double var4) {
-        ArrayList<String> result = new ArrayList<>();
+    public static Set<String> searchSolution (double var1, double var2, double var3, double var4) {
+        Set<String> result = new HashSet<>();
         List<Double> input = new ArrayList<>();
         input.add(var1);
         input.add(var2);
@@ -138,41 +137,26 @@ public class Main {
 
         for (int i = 0; i < input.size(); i++) {
             a = input.get(i);
-            if (i != 0 && a == input.get(0)) {
-                break;
-            }
-            else {
-                input1 = new ArrayList<>(input);
-                input1.remove(i);
-            }
+            input1 = new ArrayList<>(input);
+            input1.remove(i);
             for (int j = 0; j < input1.size(); j++) {
                 b = input1.get(j);
-                if (j != 0 && b == input1.get(0)) {
-                    break;
-                }
-                else {
-                    input2 = new ArrayList<>(input1);
-                    input2.remove(j);
-                }
+                input2 = new ArrayList<>(input1);
+                input2.remove(j);
                 for (int k = 0; k < input2.size(); k++) {
                     c = input2.get(k);
-                    if (k != 0 && c == input2.get(0)) {
-                        break;
-                    }
-                    else {
                         input3 = new ArrayList<>(input2);
                         input3.remove(k);
                         d = input3.get(0);
                         result.addAll(singleSolution(a,b,c,d));
-                    }
                 }
             }
         }
         return result;
     }
 
-    public static ArrayList<String> singleSolution (double var1, double var2, double var3, double var4) {
-        ArrayList<String> result = new ArrayList<>();
+    public static Set<String> singleSolution (double var1, double var2, double var3, double var4) {
+        Set<String> result = new HashSet<>();
         double firstOp1, secOp1, finalOp1;
         double firstOp2, secOp2, finalOp2;
         double firstOp3, secOp3, finalOp3;
