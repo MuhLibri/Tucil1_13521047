@@ -11,4 +11,4 @@ Untuk menjalankan program ini, cukup menyediakan environment yang biasa digunaka
 
 Setelah Main.class ada, pengguna dapat menjalankan program dengan mengetik ``java Main`` pada terminal. Pada awal program, pengguna akan diminta untuk menginput manual atau dirandom dari program. Untuk memilih input manual, pengguna cukup mengetikkan ``1`` dan ketik ``2`` untuk memilih random. Setelah program mendapatkan input, hasil solusi akan ditampilkan dan pengguna akan diminta untuk memilih menyimpan solusi atau tidak. Pengguna cukup mengetikkan ``1`` jika ingin menyimpan solusi dan ``2`` jika tidak. Jika ingin menyimpan solusi, maka pengguna selanjutnya akan dimintai nama file. Lalu, pada bagian akhir pengguna akan memilih untuk keluar program atau tidak. Ketik ``1`` jika ingin keluar program dan ``2`` jika masih ingin menggunakan program.
 
-Made by Muhammad Equilibrie Fajria
+>> Made by Muhammad Equilibrie Fajria
